@@ -7,14 +7,14 @@ jobs:
       - name: my-step
         run: echo "Hello World!"
       - name: get code
-        uses: actions/checkout@v4.1.6
+        uses: actions/checkout@v4
                
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.2    
+        uses: actions/setup-node@v4    
         with:
           node-version: 18
       - name: install npm dependencies
-        run: npm install
+        run: npm ci
       - name: npm test
         run: npm test
         
