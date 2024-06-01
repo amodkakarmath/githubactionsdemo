@@ -12,7 +12,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4    
         with:
-          node-version: 18
+          node-version: 18.20.3
       - name: install npm dependencies
         run: npm ci
       - name: npm test
