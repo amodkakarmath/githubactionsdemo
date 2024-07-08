@@ -17,7 +17,7 @@ jobs:
         run: npm ci
         
       - name: upload arctifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: file-uploded
           path: package.json
@@ -27,7 +27,7 @@ jobs:
       - name: deploy code 
         run: echo "deploying..."
       - name: download arctifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: file-uploded
       - name: output 
