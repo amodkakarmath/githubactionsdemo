@@ -20,9 +20,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: file-uploded
-          path: 
-            package.json
-            
+          path: package.json
   deploy:
     runs-on: ubuntu-latest
     steps:
