@@ -1,7 +1,7 @@
 name: hello-world
 on: push
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
@@ -15,6 +15,13 @@ jobs:
           node-version: 16
       - name: install npm dependencies
         run: npm ci
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy code 
+        run: echo "deploying..."
+    
+  
       # - name: npm test
       #   run: npm test
         
