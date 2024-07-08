@@ -15,6 +15,14 @@ jobs:
           node-version: 16
       - name: install npm dependencies
         run: npm ci
+        
+      - name: upload arctifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: file-uploded
+          path: 
+            package.json
+            
   deploy:
     runs-on: ubuntu-latest
     steps:
