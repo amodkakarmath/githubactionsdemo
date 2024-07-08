@@ -22,6 +22,7 @@ jobs:
           name: file-uploded
           path: package.json
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: deploy code 
