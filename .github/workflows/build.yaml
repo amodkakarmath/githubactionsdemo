@@ -28,6 +28,14 @@ jobs:
     steps:
       - name: deploy code 
         run: echo "deploying..."
+      - name: download arctifact
+        uses: actions/download-artifact@v3
+        with:
+          name: file-uploded
+      - name: output 
+        run: ls
+
+     
     
   
       # - name: npm test
