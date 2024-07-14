@@ -7,8 +7,9 @@ jobs:
         - name: test code 
           id: run-test
           run: npm run test
-        - name: get code
-          uses: actions/checkout@v4
+        - name: must run step even if prew fails
+          if: failure() && steps.run-test.outcome == 'failure'
+          run: echo "works"
   build:
     needs: test
     runs-on: ubuntu-latest
