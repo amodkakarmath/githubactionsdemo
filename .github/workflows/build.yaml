@@ -1,7 +1,15 @@
 name: hello-world
 on: push
 jobs:
+  test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: test code 
+          run: npm run test
+        - name: get code
+          uses: actions/checkout@v4
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: my-step
@@ -39,12 +47,4 @@ jobs:
     steps:
       - name: displsya report
         run: echo "this is th rep[ort job"
-     
-    
-  
-      # - name: npm test
-      #   run: npm test
         
-            
-            
-            
