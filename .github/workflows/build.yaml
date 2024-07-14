@@ -25,7 +25,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: deploy code 
+       name: deploy code 
         run: echo "deploying..."
       - name: download arctifact
         uses: actions/download-artifact@v4
