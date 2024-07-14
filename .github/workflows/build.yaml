@@ -26,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: deploy code 
+        continue-on-error: true
         run: echo "deploying...
       - name: download arctifact
         uses: actions/download-artifact@v4
