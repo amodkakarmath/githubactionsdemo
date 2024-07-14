@@ -34,7 +34,11 @@ jobs:
           name: file-uploded
       - name: output 
         run: ls
-
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: displsya report
+        run: echo "this is th rep[ort job"
      
     
   
