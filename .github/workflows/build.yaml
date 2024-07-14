@@ -50,7 +50,7 @@ jobs:
         run: |
           echo "lint check"
   report:
-    needs: [test, lint]
+    needs: [deploy, lint]
     if: failure()
     runs-on: ubuntu-latest
     steps:
