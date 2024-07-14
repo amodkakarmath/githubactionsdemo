@@ -5,6 +5,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: test code 
+          id: run-test
           run: npm run test
         - name: get code
           uses: actions/checkout@v4
@@ -43,8 +44,12 @@ jobs:
       - name: output 
         run: ls
   report:
+    needs: [test, deploy]
+    if: failure()
     runs-on: ubuntu-latest
     steps:
-      - name: displsya report
-        run: echo "this is th rep[ort job"
+      - name: output infp
+        run: |
+          echo "somethin went wrong"
+          echo "{{ toJSON(github) }}"
         
